@@ -16,3 +16,20 @@ btnAlmacenar.addEventListener('click', function () {
 
 //Recorrer el sessionStorage y el localStorage
 //Mostrando las variables como una fila en la tabla del DOM
+
+function construírFilas() {
+    for (let i = 0; i < window.sessionStorage.length; i++) {
+    let cuerpoTabla=document.getElementById("cuerpoDeLaTabla");
+    let fila=document.createElement("tr");
+    let celda=document.createElement("td");
+    //Crear nodo de texto
+    let texto=document.createTextNode("Aló");
+    celda.appendChild(texto);
+
+    fila.appendChild(celda);
+    cuerpoTabla.appendChild(fila);
+        
+    }
+}
+
+construírFilas()
